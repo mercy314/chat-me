@@ -22,8 +22,9 @@ class _TestPageState extends State<TestPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          count++;
-          print(count);
+          setState(() {
+            count++;
+          });
         },
         child: Icon(Icons.add),
       ),

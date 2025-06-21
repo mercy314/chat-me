@@ -1,3 +1,4 @@
+import 'package:chatme/components/post_item.dart';
 import 'package:chatme/styles/app_colours.dart';
 import 'package:flutter/material.dart';
 
@@ -19,22 +20,12 @@ class Homepage extends StatelessWidget {
     );
   }
 
-  Widget user() {
-    return Row(
-      children: [
-        Image.asset(
-          'assets/temp/user1.jpg', 
-          width: 40, height: 40),
-        SizedBox(width: 16),
-        Text("Akinyefa Mercy"),
-      ],
-    );
-  }
+  
 
   List<Widget> mockUsersFromServer() {
     List<Widget> users = [];
     for (var i = 0; i < 1999; i++) {
-      users.add(user());
+      users.add(PostItem());
     }
     return users;
   }
